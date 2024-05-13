@@ -5,7 +5,6 @@ set design_name "xdma_ku042"
 
 create_project $overlay_name $project_folder -part $device
 add_files -fileset sources_1 [glob ./src/*.v]
-
 create_bd_design $design_name
 source ./scripts/ku042.tcl
 make_wrapper -files [get_files ${project_folder}/${overlay_name}.srcs/sources_1/bd/${design_name}/${design_name}.bd] -top

@@ -9,11 +9,15 @@ In `hw` folder
 ```
 vivado -notrace -mode batch -source scripts/run.tcl
 ```
-Program the board using the output `*.bit`
+Program the board using the output `*.bit`. **Reboot the system on each time you program the FPGA.**
 
 
 ## Install Driver
 The Windows 10 driver is located in `driver` folder.
+* Turn off the driver signature enforcement on Windows.
+* Specify the driver file in Device Manager.
+* Reboot.
+
 
 ## Run Applications
 Two applications are provided in `app` folder. Refer to [https://github.com/yiyaowen/xdma_driver_win](https://github.com/yiyaowen/xdma_driver_win) for the source code.
