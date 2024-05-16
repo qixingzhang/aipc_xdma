@@ -9,7 +9,16 @@ In `hw` folder
 ```
 vivado -notrace -mode batch -source scripts/run.tcl
 ```
-Program the board using the output `*.bit`. **Reboot the system on each time you program the FPGA.**
+
+The block design is shown as below, The IP `axis_test_pattern_0` generates stream packets with length 1024.
+
+<p align="center">
+<img src ="images/block_design.jpg" width="80%"/>
+</p>
+<p align = "center">
+</p>
+
+Program the board using the output `*.bit`. **Reboot** the system on each time you program the FPGA.
 
 
 ## Install Driver
@@ -34,6 +43,7 @@ Two applications are provided in `app` folder. Refer to [https://github.com/yiya
     ```
     xdma_rw.exe c2h_0 read 0x0 -l 512
     ```
+    Run `xdma_rw.exe -h` for the usage
     <p align="center">
     <img src ="images/xdma_rw.png" width="100%"/>
     </p>
